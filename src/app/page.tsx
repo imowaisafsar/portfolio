@@ -1,10 +1,10 @@
 "use client";
 
-import styles from './page.module.css'
-import { Ubuntu } from 'next/font/google';
-import { ThemeProvider } from 'next-themes';
-import Intro from '@/components/Intro/Intro';
-import TopNavbar from '@/components/TopNavbar/TopNavbar';
+import styles from "./page.module.css";
+import { Ubuntu } from "next/font/google";
+import { ThemeProvider } from "next-themes";
+import IntroComponent from "@/components/IntroComponent/IntroComponent";
+import TopNavbarComponent from "@/components/TopNavbarComponent/TopNavbarComponent";
 
 // const ubuntu = Ubuntu({
 //   weight: '300',
@@ -12,12 +12,12 @@ import TopNavbar from '@/components/TopNavbar/TopNavbar';
 // });
 
 export default function Home() {
-  return (
-    <ThemeProvider attribute='class'>
-      <main className={`w-screen min-h-screen`}>
-        <TopNavbar />
-        <Intro />
-      </main>
-    </ThemeProvider>
-  )
+    return (
+        <ThemeProvider attribute="class">
+            <main className={`w-screen`}>
+                <TopNavbarComponent />
+                <IntroComponent />
+            </main>
+        </ThemeProvider>
+    );
 }
