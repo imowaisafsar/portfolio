@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 import styles from './AboutComponent.module.css';
 
-interface AboutComponentProps {}
+interface AboutComponentProps { }
 
 const AboutComponent: FC<AboutComponentProps> = () => (
-  <div className={styles.AboutComponent}>
+  <div className={`w-screen h-[calc(100vh_-_54px)] bg-gray-200 dark:bg-black/50 ${styles.AboutComponent}`}>
     AboutComponent Component
   </div>
 );

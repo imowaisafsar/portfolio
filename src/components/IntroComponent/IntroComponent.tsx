@@ -7,14 +7,13 @@ import { Shantell_Sans } from 'next/font/google';
 
 const shantellSans = Shantell_Sans({
   weight: '400',
-  style: 'normal',
   subsets: ['latin'],
 });
 
 interface IntroComponentProps { }
 
 const IntroComponent: FC<IntroComponentProps> = () => (
-  <div className='flex flex-col justify-center items-center w-screen h-full min-h-screen bg-gray-200 dark:bg-black/50'>
+  <div className='flex flex-col justify-center items-center w-screen h-[calc(100vh_-_54px)] bg-gray-200 dark:bg-black/50'>
     <h1 className={`text-gray-800 dark:text-gray-200 xl:text-[180px] leading-none m-0 p-0 drop-shadow-10x10dark dark:drop-shadow-10x10light ${shantellSans.className}`}>Hello<span className='text-blue-700'>.</span></h1>
     <span className='flex items-center'>
       <h1 className={`text-gray-800 dark:text-gray-200 xl:text-[180px] leading-none m-0 p-0 drop-shadow-10x10dark dark:drop-shadow-10x10light ${shantellSans.className}`}>I am</h1>
