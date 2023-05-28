@@ -9,7 +9,7 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: 'class',
-  purge: ['./src/**/*.tsx'],
+  purge: ['./pages/**/*.tsx'],
   theme: {
     extend: {
       dropShadow: {

@@ -2,7 +2,7 @@
 
 import React, { FC } from 'react';
 import styles from './TopNavbarComponent.module.css';
-import ThemeToggleButtonComponent from '@/components/ThemeToggleButtonComponent/ThemeToggleButtonComponent';
+import ThemeToggleButtonComponent from '../../components/ThemeToggleButtonComponent/ThemeToggleButtonComponent';
 import Link from 'next/link';
 
 interface TopNavbarComponentProps { }

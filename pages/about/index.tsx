@@ -3,8 +3,8 @@
 import styles from './about.module.css'
 import { Ubuntu } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
-import TopNavbarComponent from '@/components/TopNavbarComponent/TopNavbarComponent';
-import AboutComponent from '@/components/AboutComponent/AboutComponent';
+import TopNavbarComponent from '../../components/TopNavbarComponent/TopNavbarComponent';
+import AboutComponent from '../../components/AboutComponent/AboutComponent';
 
 const ubuntu = Ubuntu({
     weight: '300',
