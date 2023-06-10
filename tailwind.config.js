@@ -1,67 +1,32 @@
 /** @type {import('tailwindcss').Config} */
+
+const { fontFamily } = require(`tailwindcss/defaultTheme`);
+
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
 
     // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: 'class',
-  purge: ['./pages/**/*.tsx'],
   theme: {
     extend: {
-      dropShadow: {
-        '3xl': '0 35px 35px rgba(0, 0, 0, 0.25)',
-        '4xl': [
-          '0 35px 35px rgba(0, 0, 0, 0.25)',
-          '0 45px 65px rgba(0, 0, 0, 0.15)'
-        ],
-        '10x10dark': '10px 10px #9e9e9e',
-        '10x10light': '10px 10px #4d4d4d50',
+      fontFamily: {
+        mont: [`var(--font-mont)`, ...fontFamily.sans]
       },
       colors: {
-        primary: { "50": "#eff6ff", "100": "#dbeafe", "200": "#bfdbfe", "300": "#93c5fd", "400": "#60a5fa", "500": "#3b82f6", "600": "#2563eb", "700": "#1d4ed8", "800": "#1e40af", "900": "#1e3a8a" }
+        dark: "#1b1b1b",
+        light: "#f5f5f5",
+        primary: "#B63E96", // 240,86,199
+        primaryDark: "#58E6D9", // 80,230,217
+      },
+      animation: {
+        'spin-slow': 'spin 10s linear infinite',
       }
     },
-    fontFamily: {
-      'body': [
-        'Inter',
-        'ui-sans-serif',
-        'system-ui',
-        '-apple-system',
-        'system-ui',
-        'Segoe UI',
-        'Roboto',
-        'Helvetica Neue',
-        'Arial',
-        'Noto Sans',
-        'sans-serif',
-        'Apple Color Emoji',
-        'Segoe UI Emoji',
-        'Segoe UI Symbol',
-        'Noto Color Emoji'
-      ],
-      'sans': [
-        'Inter',
-        'ui-sans-serif',
-        'system-ui',
-        '-apple-system',
-        'system-ui',
-        'Segoe UI',
-        'Roboto',
-        'Helvetica Neue',
-        'Arial',
-        'Noto Sans',
-        'sans-serif',
-        'Apple Color Emoji',
-        'Segoe UI Emoji',
-        'Segoe UI Symbol',
-        'Noto Color Emoji'
-      ]
-    }
   },
-  variants: {},
   plugins: [],
 }
+
