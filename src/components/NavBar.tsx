@@ -3,8 +3,9 @@ import React from 'react';
 import Logo from './Logo';
 import NavBarLink from './NavBarLink';
 import { INavBarLinkModel } from '../../core/interfaces/INavBarLinkModel';
-import { DribbbleIcon, GithubIcon, LinkedInIcon, PinterestIcon, SunIcon, TwitterIcon } from './Icons';
+import { DribbbleIcon, GithubIcon, LinkedInIcon, MoonIcon, PinterestIcon, SunIcon, TwitterIcon } from './Icons';
 import { motion } from 'framer-motion';
+import useThemeSwitcher, { DARK_THEME_CLASS, LIGHT_THEME_CLASS } from '../../hooks/useThemeSwitcher';
 
 const nabBarMenuItems: INavBarLinkModel[] = [
     { key: 1, href: '/', title: 'Home', className: 'mr-4' },
@@ -14,8 +15,11 @@ const nabBarMenuItems: INavBarLinkModel[] = [
 ];
 
 const NavBar: React.FC = () => {
+
+    const [mode, setMode] = useThemeSwitcher();
+
     return (
-        <header className='w-full px-32 py-8 font-medium flex items-center justify-between'>
+        <header className='w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light'>
             <nav>
 
                 {nabBarMenuItems.map((nabBarMenuItem) => (
@@ -41,6 +45,16 @@ const NavBar: React.FC = () => {
                 <motion.a href='https://pinterest.com' target={'_blank'} title='Pinterest' whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }} className='w-6 ml-3'>
                     <PinterestIcon />
                 </motion.a>
+
+                <button onClick={() => setMode(mode === LIGHT_THEME_CLASS ? DARK_THEME_CLASS : LIGHT_THEME_CLASS)}
+                    type='button' className={`ml-3 flex items-center justify-center rounded-full p-1 ${mode === DARK_THEME_CLASS ? 'bg-light text-dark' : 'bg-dark text-light'}`}>
+                    {
+                        mode === DARK_THEME_CLASS ?
+                            <SunIcon className={`fill-dark`} /> :
+                            <MoonIcon className={`fill-dark`} />
+                    }
+                </button>
+
             </nav>
             <div className='absolute left-[50%] top-2 translate-x-[-50%]'>
                 <Logo />
