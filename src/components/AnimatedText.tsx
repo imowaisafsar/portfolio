@@ -33,7 +33,7 @@ interface AnimatedTextProps extends IAnimatedTextModel { }
 
 const AnimatedText: React.FC<AnimatedTextProps> = ({ text, className }) => {
     return (
-        <div className={`w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden`}>
+        <div className={`w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden sm:py-0`}>
 
             <motion.h1 className={`inline-block w-full text-dark dark:text-light font-bold capitalize text-8xl ${className}`}
                 variants={headingMotionOption} initial='initial' animate='animate'>
