@@ -8,6 +8,7 @@ import articleImg1 from '../../public/images/articles/pagination component in re
 import articleImg2 from '../../public/images/articles/What is Redux with easy explanation.png';
 import articleImg3 from '../../public/images/articles/What is higher order component in React.jpg';
 import { motion, useMotionValue } from 'framer-motion'
+import TransitionEffect from '../components/TransitionEffect'
 
 const FramerImage = motion(Image);
 
@@ -72,6 +73,7 @@ const articles = () => {
                 <title>Article | Owais Afsar</title>
                 <meta name="description" content="Article | Owais Afsar" />
             </Head>
+            <TransitionEffect />
             <main className={`flex flex-col items-center w-full justify-center`}>
                 <Layout className={`pt-16`}>
                     <AnimatedText text='Words Can Change The World!' className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl' />

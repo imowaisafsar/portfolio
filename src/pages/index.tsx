@@ -8,6 +8,7 @@ import { LinkArrow } from '../components/Icons';
 import HireMe from '../components/HireMe';
 import lightBulb from '../../public/images/svgs/miscellaneous_icons_1.svg';
 import AnimatedText from '../components/AnimatedText';
+import TransitionEffect from '../components/TransitionEffect';
 
 const Home: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const Home: React.FC = () => {
         <title>Owais Afsar | Full stack Developer</title>
         <meta name="description" content="Full stack Developer" />
       </Head>
+      <TransitionEffect />
       <main className={`flex items-center text-dark w-full min-h-screen dark:text-light`}>
         <Layout className={`pt-0 md:pt-16 sm:pt-8`}>
           <div className="flex items-center justify-between w-full lg:flex-col">
